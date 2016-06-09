@@ -47,3 +47,7 @@ body {
   border-bottom: 5px solid;
   border-left:   5px solid transparent;
 }
+
+.jumbotron {
+	margin-top: 20px;
+}
