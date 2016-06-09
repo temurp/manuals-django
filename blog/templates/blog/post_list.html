@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- <div class = "container"> -->
+	<h1>Manuals</h1>
+<!-- 	<div class='row'>
+   <div class="col-lg-12 col-offset-6 centered"> -->
+	{% for post in post_list %}
+	
+	<a href="{% url 'post_detail' post.id %}"><h2>{{ post.title }}</h2></a>
+	<em>Published at: {{post.create_date}}</em>
+	<p>
+		{{ post.text|truncatewords:30|linebreaks }}
+		<br>
+		<a href="{% url 'post_detail' post.id %}">Read all</a>
+		<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+	</p>
+
+	{% endfor %}
+<!-- </div>
+</div>
+</div> -->
+{% endblock content %}
