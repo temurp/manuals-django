@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 	<script type="{% static 'js/bootstrap.min.js' %}"></script>
 	<script type="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+	<script type="{% static 'js/angular.min.js' %}"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 				<a class="blog-nav-item active" href="{% url 'post_list' %}">Home</a>
 				<a class="blog-nav-item" href="{% url 'blog.views.post_new' %}">Add post</a>
 				<a class="blog-nav-item" href="{% url 'about' %}">About</a>
-				<a class="blog-nav-item" href="#">To Do</a>
+				<a class="blog-nav-item" href="{% url 'todo' %}">To Do</a>
 					<form class="navbar-form navbar-right" role="form" action=".">
 						<input type='text' class="form-control" name='query' value="{{query|default:''}}">
 						<input type='button' class='btn btn-default' value='Find'>
